@@ -33,7 +33,6 @@
     .hero {
       text-align: center;
       padding: 120px 20px 80px;
-      animation: fadeIn 1.5s ease;
     }
     .hero h1 {
       font-size: 48px;
@@ -88,9 +87,15 @@
       color: #94a3b8;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* SCROLL ANIMATIONS */
+    .hidden {
+      opacity: 0;
+      transform: translateY(40px);
+      transition: all 0.8s ease;
+    }
+    .show {
+      opacity: 1;
+      transform: translateY(0);
     }
   </style>
 </head>
@@ -106,53 +111,66 @@
   </nav>
 </header>
 
-<section class="hero">
+<section class="hero hidden">
   <h1>Automatiza procesos y gana tiempo con tecnología</h1>
   <p>Creo bots, herramientas de trading y automatizaciones con Python que ayudan a negocios y personas a ahorrar tiempo y generar resultados.</p>
   <a href="https://wa.me/51982327731?text=Hola,%20vi%20tu%20web%20y%20quiero%20información" class="btn">Hablar por WhatsApp</a>
 </section>
 
-<section id="servicios" class="section">
+<section id="servicios" class="section hidden">
   <h2>Servicios</h2>
   <div class="grid">
-    <div class="card">
+    <div class="card hidden">
       <h3>Bots de Telegram</h3>
       <p>Automatiza mensajes, alertas y procesos sin intervención manual.</p>
     </div>
-    <div class="card">
+    <div class="card hidden">
       <h3>Trading Automatizado</h3>
       <p>Scripts inteligentes que analizan el mercado y detectan oportunidades.</p>
     </div>
-    <div class="card">
+    <div class="card hidden">
       <h3>Automatización con Python</h3>
       <p>Soluciones personalizadas para optimizar tareas repetitivas.</p>
     </div>
   </div>
 </section>
 
-<section id="casos" class="section">
+<section id="casos" class="section hidden">
   <h2>Casos reales</h2>
   <div class="grid">
-    <div class="card">
+    <div class="card hidden">
       <h3>Bot de alertas</h3>
       <p>Envía señales de trading en tiempo real a Telegram.</p>
     </div>
-    <div class="card">
+    <div class="card hidden">
       <h3>Automatización empresarial</h3>
       <p>Reducción de tareas manuales en procesos repetitivos.</p>
     </div>
   </div>
 </section>
 
-<section id="contacto" class="section">
+<section id="contacto" class="section hidden">
   <h2>Trabajemos juntos</h2>
   <p>Cuéntame tu idea y te ayudo a convertirla en una solución real.</p>
   <a href="https://wa.me/51982327731?text=Hola,%20vi%20tu%20web%20y%20quiero%20información" class="btn">Escríbeme ahora</a>
 </section>
 
-<footer>
+<footer class="hidden">
   <p>© 2026 SmarfTech Studio - Automatización y tecnología</p>
 </footer>
+
+<script>
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('show');
+      }
+    });
+  });
+
+  const hiddenElements = document.querySelectorAll('.hidden');
+  hiddenElements.forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
