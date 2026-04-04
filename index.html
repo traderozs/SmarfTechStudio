@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tu Servicio Profesional</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+    header {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: #020617;
+    }
+    header h1 { margin: 0; }
+    nav a {
+      color: white;
+      margin-left: 20px;
+      text-decoration: none;
+    }
+    .hero {
+      text-align: center;
+      padding: 100px 20px;
+    }
+    .hero h2 {
+      font-size: 40px;
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-size: 18px;
+      color: #cbd5f5;
+    }
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #22c55e;
+      color: black;
+      text-decoration: none;
+      border-radius: 8px;
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      padding: 40px;
+    }
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #020617;
+      margin-top: 40px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Manuel Dev</h1>
+  <nav>
+    <a href="#">Inicio</a>
+    <a href="#servicios">Servicios</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
+
+<section class="hero">
+  <h2>Automatiza tu negocio con tecnología</h2>
+  <p>Desarrollo soluciones con Python, IA y automatización para ahorrar tiempo y dinero.</p>
+  <a href="#contacto" class="btn">Contáctame</a>
+</section>
+
+<section id="servicios" class="services">
+  <div class="card">
+    <h3>Bots de Telegram</h3>
+    <p>Automatiza mensajes, alertas y procesos diarios.</p>
+  </div>
+  <div class="card">
+    <h3>Trading Automatizado</h3>
+    <p>Scripts para análisis y señales en criptomonedas.</p>
+  </div>
+  <div class="card">
+    <h3>Automatización con Python</h3>
+    <p>Soluciones personalizadas para tu negocio.</p>
+  </div>
+</section>
+
+<section id="contacto" class="hero">
+  <h2>Trabajemos juntos</h2>
+  <p>Escríbeme por WhatsApp y cuéntame tu idea</p>
+  <a class="btn" href="https://wa.me/51982327731">Hablar por WhatsApp</a>
+</section>
+
+<footer>
+  <p>© 2026 Manuel Dev - Todos los derechos reservados</p>
+</footer>
+
+</body>
+</html>
